@@ -1,11 +1,13 @@
-import HomePage from "./pages/HomePage/HomePage";
-import SkillsPage from "./pages/SkillsPage/SkillsPage";
+import ExperienceSection from "./sections/ExperienceSection/ExperienceSection";
+import HomeSection from "./sections/HomeSection/HomeSection";
+import SkillsSection from "./sections/SkillsSection/SkillsSection";
 
 function App() {
   return (
     <>
-      <HomePage />
-      <SkillsPage />
+      <HomeSection />
+      <SkillsSection />
+      <ExperienceSection />
     </>
   );
 }

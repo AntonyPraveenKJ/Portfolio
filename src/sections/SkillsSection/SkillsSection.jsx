@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
-import Typography from "@mui/material/Typography";
 import styled from "styled-components";
 import Lottie from "lottie-react";
 import animation from "../../assets/animation.json";
 import ProgressBar from "../../components/ProgressBar";
 import { useInView } from "react-intersection-observer";
+import { GradientText, QuotedText } from "../HomeSection/HomeSection";
 
 const StyledSkillsWrapper = styled(Box)`
   display: flex;
@@ -17,18 +17,6 @@ const StyledSkillsWrapper = styled(Box)`
   margin-top: 40px;
 `;
 
-const GradientText = styled(Typography)`
-  background: linear-gradient(
-    45deg,
-    rgba(0, 89, 253, 0.5),
-    rgba(130, 245, 115, 0.5)
-  );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  color: transparent;
-`;
-
 const skills = [
   { skill: "React.js", value: 90 },
   { skill: "Node.js", value: 80 },
@@ -37,7 +25,7 @@ const skills = [
   { skill: "HTML/CSS", value: 95 },
 ];
 
-const SkillsPage = () => {
+const SkillsSection = () => {
   const { ref, inView } = useInView({ triggerOnce: true, thereshold: 0.3 });
   const [hasAnimated, setHasAnimated] = useState(false);
 
@@ -55,6 +43,15 @@ const SkillsPage = () => {
       >
         Skills
       </GradientText>
+      <QuotedText
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.9, ease: "easeOut" }}
+        viewport={{ once: true }}
+      >
+        Skills are not just tools — they are the reflection of passion,
+        practice, and persistence.
+      </QuotedText>
       <Box
         width="80%"
         sx={{
@@ -76,7 +73,12 @@ const SkillsPage = () => {
           }}
         >
           {skills.map(({ skill, value }) => (
-            <ProgressBar key={skill} skill={skill} targetValue={value} shouldAnimate={hasAnimated} />
+            <ProgressBar
+              key={skill}
+              skill={skill}
+              targetValue={value}
+              shouldAnimate={hasAnimated}
+            />
           ))}
         </Grid>
         <Grid
@@ -92,4 +94,4 @@ const SkillsPage = () => {
   );
 };
 
-export default SkillsPage;
+export default SkillsSection;
