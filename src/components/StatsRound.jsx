@@ -38,7 +38,7 @@ const StatsRound = ({ count, name, shouldAnimate }) => {
         num += 1;
         SetCountToShow(num);
       }
-    }, 100);
+    }, 40);
     return () => clearInterval(timer);
   }, [count, shouldAnimate]);
 

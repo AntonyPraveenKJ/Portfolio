@@ -21,6 +21,7 @@ const navItems = [
   { label: "Home", to: "home" },
   { label: "Skills", to: "skills" },
   { label: "Experience", to: "experience" },
+  { label: "Technologies", to: "technologies" },
 ];
 
 const NavButton = styled(Button)`
@@ -67,7 +68,7 @@ const Navbar = () => {
     <Box sx={{ width: 250, paddingTop: 4 }}>
       <List>
         {navItems.map((item) => (
-          <ListItem button key={item.to}>
+          <ListItem key={item.to}>
             <Link
               to={item.to}
               smooth
