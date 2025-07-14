@@ -90,11 +90,18 @@ const experiences = [
     description:
       "Worked on a B2C storefront using React and Bootstrap. Focused on responsive layouts, internationalization, and product filtering logic for an e-commerce site.",
   },
+  {
+    position: "Trainee Developer",
+    company: "Brototype Cochin",
+    duration: "May 2022 – Feb 2023",
+    description:
+      "Started my IT journey with hands-on training in Full Stack Development, specializing in the MERN stack. Built responsive web applications and gained practical experience with modern web technologies.",
+  },
 ];
 
 const ExperienceSection = () => {
   return (
-    <ExperienceSectionWrapper>
+    <ExperienceSectionWrapper id="experience">
       <GradientText
         variant="h2"
         fontFamily="Dancing Script, cursive"

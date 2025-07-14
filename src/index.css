@@ -18,5 +18,9 @@ body {
   padding: 0;
   min-width: 100%;
   min-height: 100vh;
-  background-color:ghostwhite;
+  background-color: ghostwhite;
+}
+
+html {
+  scroll-behavior: smooth;
 }

@@ -3,7 +3,7 @@ import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
 import styled from "styled-components";
 import Lottie from "lottie-react";
-import animation from "../../assets/animation.json";
+import animation from "../../assets/lottieFiles/animation.json";
 import ProgressBar from "../../components/ProgressBar";
 import { useInView } from "react-intersection-observer";
 import { GradientText, QuotedText } from "../HomeSection/HomeSection";
@@ -35,7 +35,7 @@ const SkillsSection = () => {
     }
   }, [inView, hasAnimated]);
   return (
-    <StyledSkillsWrapper ref={ref}>
+    <StyledSkillsWrapper id="skills" ref={ref}>
       <GradientText
         variant="h2"
         fontFamily="Dancing Script, cursive"

@@ -11,6 +11,8 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import IconsRow from "../../components/IconsRow";
 import { motion } from "framer-motion";
+import Lottie from "lottie-react";
+import handWave from "../../assets/lottieFiles/handWave.json";
 
 const MotionGrid = motion(Grid);
 
@@ -168,7 +170,7 @@ const HomeSection = () => {
   }, []);
 
   return (
-    <StyledHomePageBox data-testid="home-page-container">
+    <StyledHomePageBox id="home">
       <Container
         sx={{
           display: "flex",
@@ -206,13 +208,29 @@ const HomeSection = () => {
             >
               Hi, I'm
             </Typography>
-            <GradientText
-              fontFamily="Roboto Mono"
-              fontWeight="bold"
-              fontSize="55px"
+            <Grid
+              sx={{
+                display: "flex",
+                alignItems: "center",
+              }}
             >
-              Praveen
-            </GradientText>
+              <GradientText
+                fontFamily="Roboto Mono"
+                fontWeight="bold"
+                fontSize="55px"
+              >
+                Praveen
+              </GradientText>
+              <Grid
+                sx={{
+                  width: "55px",
+                  marginTop: "7px",
+                }}
+              >
+                <Lottie animationData={handWave} loop={true} />
+              </Grid>
+            </Grid>
+
             <Typography
               sx={{
                 color: "#191919",

@@ -7,7 +7,7 @@ const StyledLinearProgress = styled(LinearProgress)(({ theme }) => ({
   borderRadius: 5,
   [`& .MuiLinearProgress-bar`]: {
     borderRadius: 5,
-    transition: "width 1s ease-in-out", // smooth fill animation
+    transition: "width 1s ease-in-out",
   },
 }));
 
