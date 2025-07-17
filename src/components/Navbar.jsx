@@ -14,6 +14,7 @@ import {
   useTheme,
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
+import DownloadIcon from "@mui/icons-material/Download";
 import { Link } from "react-scroll";
 import styled from "styled-components";
 
@@ -22,6 +23,7 @@ const navItems = [
   { label: "Skills", to: "skills" },
   { label: "Experience", to: "experience" },
   { label: "Technologies", to: "technologies" },
+  { label: "Contact", to: "contact" },
 ];
 
 const NavButton = styled(Button)`
@@ -65,7 +67,16 @@ const Navbar = () => {
   };
 
   const drawer = (
-    <Box sx={{ width: 250, paddingTop: 4 }}>
+    <Box
+      sx={{
+        width: 250,
+        paddingTop: 4,
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        flexDirection: "column",
+      }}
+    >
       <List>
         {navItems.map((item) => (
           <ListItem key={item.to}>
@@ -98,6 +109,26 @@ const Navbar = () => {
           </ListItem>
         ))}
       </List>
+      <Button
+        size="small"
+        href="/cv.pdf"
+        download
+        endIcon={<DownloadIcon />}
+        sx={{
+          backgroundImage: "linear-gradient(45deg,  #0059fd, #37ff1d)",
+          fontFamily: "Roboto Mono",
+          fontWeight: "bold",
+          color: "white",
+          textTransform: "none",
+          "&:hover": {
+            transform: "scale(1.1)",
+            borderBottom: "2px solid rgb(29, 233, 155)",
+            cursor: "pointer",
+          },
+        }}
+      >
+        Download CV
+      </Button>
     </Box>
   );
 
@@ -123,9 +154,23 @@ const Navbar = () => {
               WebkitBackgroundClip: "text",
               WebkitTextFillColor: "transparent",
               backgroundClip: "text",
+              cursor: "pointer",
+              "&:hover": {
+                transform: "scale(1.06)",
+                transition: "transform 0.8s ease",
+              },
             }}
           >
-            My Portfolio
+            <Link
+              to="home"
+              smooth
+              duration={500}
+              spy={true}
+              offset={-70}
+              style={{ textDecoration: "none" }}
+            >
+              Portfolio
+            </Link>
           </Box>
           {/* Desktop nav links */}
           {!isMobile && (
@@ -145,6 +190,26 @@ const Navbar = () => {
                   </NavButton>
                 </Link>
               ))}
+              <Button
+                size="small"
+                href="/cv.pdf"
+                download
+                endIcon={<DownloadIcon />}
+                sx={{
+                  backgroundImage: "linear-gradient(45deg,  #0059fd, #37ff1d)",
+                  fontFamily: "Roboto Mono",
+                  fontWeight: "bold",
+                  color: "white",
+                  textTransform: "none",
+                  "&:hover": {
+                    transform: "scale(1.1)",
+                    borderBottom: "2px solid rgb(29, 233, 155)",
+                    cursor: "pointer",
+                  },
+                }}
+              >
+                Download CV
+              </Button>
             </Box>
           )}
 

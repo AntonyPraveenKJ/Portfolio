@@ -13,8 +13,9 @@ import IconsRow from "../../components/IconsRow";
 import { motion } from "framer-motion";
 import Lottie from "lottie-react";
 import handWave from "../../assets/lottieFiles/handWave.json";
+import bgBlob from "../../assets/images/low-poly-grid-haikei.svg";
 
-const MotionGrid = motion(Grid);
+const MotionGrid = motion.create(Grid);
 
 const StyledHomePageBox = styled(Box)`
   display: flex;
@@ -23,10 +24,16 @@ const StyledHomePageBox = styled(Box)`
   width: 100%;
   min-height: 100vh;
   background-image: linear-gradient(
-    45deg,
-    rgb(255, 255, 255),
-    rgba(216, 190, 250, 0.56)
-  );
+      45deg,
+      rgba(216, 190, 250, 0.56),
+      rgb(255, 255, 255)
+    ),
+    url(${bgBlob}); /* no backticks here */
+
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  box-shadow: 4px 0 8px 2px rgba(151, 151, 151, 0.3);
 `;
 
 const blink = keyframes`
@@ -37,14 +44,14 @@ const TypingText = styled.h3`
   background-color: red;
   display: inline-block;
   white-space: pre;
-  border-right: 2px solid rgba(55, 255, 29, 0.8);
+  border-right: 2px solid rgba(30, 255, 0, 1);
   padding-right: 4px;
   margin: 0;
   animation: ${blink} 1s step-end infinite;
   background: linear-gradient(
     45deg,
-    rgba(0, 89, 253, 0.5),
-    rgba(55, 255, 29, 0.8)
+    rgba(0, 89, 253, 0.84),
+    rgba(30, 255, 0, 1)
   );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -85,8 +92,8 @@ const StyledImage = styled.img`
 export const GradientText = styled(Typography)`
   background: linear-gradient(
     45deg,
-    rgba(0, 89, 253, 0.5),
-    rgba(55, 255, 29, 0.8)
+    rgba(0, 89, 253, 0.76),
+    rgba(41, 252, 13, 0.93)
   );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -101,7 +108,7 @@ export const QuotedText = styled(motion.p)`
   font-style: italic;
   position: relative;
   padding: 1.5rem 2rem;
-  color: rgb(146, 144, 144);
+  color: rgba(43, 42, 42, 1);
   max-width: 700px;
   margin: auto;
 
@@ -126,26 +133,26 @@ export const QuotedText = styled(motion.p)`
   }
 `;
 
-const iconsData = [
-  {
-    icon: <FacebookIcon fontSize="small" />,
-    link: "https://facebook.com/yourusername",
-    color: "#1877F2",
-  },
-  {
-    icon: <InstagramIcon fontSize="small" />,
-    link: "https://instagram.com/yourusername",
-    color: "#E1306C",
-  },
+export const iconsData = [
   {
     icon: <LinkedInIcon fontSize="small" />,
-    link: "https://linkedin.com/in/yourusername",
+    link: import.meta.env.VITE_LINKEDIN_ID,
     color: "#0A66C2",
   },
   {
     icon: <GitHubIcon fontSize="small" />,
-    link: "",
+    link: import.meta.env.VITE_GIT_ID,
     color: "#333",
+  },
+  {
+    icon: <FacebookIcon fontSize="small" />,
+    link: import.meta.env.VITE_FACEBOOK_ID,
+    color: "#1877F2",
+  },
+  {
+    icon: <InstagramIcon fontSize="small" />,
+    link: import.meta.env.VITE_INSTAGRAM_ID,
+    color: "#E1306C",
   },
 ];
 

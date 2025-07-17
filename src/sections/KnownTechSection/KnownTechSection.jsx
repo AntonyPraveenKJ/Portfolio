@@ -108,6 +108,7 @@ const KnownTechSection = () => {
                 flexDirection: "column",
                 width: "100px",
                 height: "100px",
+                backgroundColor: "white",
                 boxShadow: "0 4px 6px -4px rgba(0, 0, 0, 0.3)",
                 "&:hover": {
                   transform: "scale(1.05)",

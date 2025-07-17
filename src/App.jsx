@@ -1,4 +1,5 @@
 import Navbar from "./components/Navbar";
+import ContactSection from "./sections/ContactSection/ContactSection";
 import ExperienceSection from "./sections/ExperienceSection/ExperienceSection";
 import HomeSection from "./sections/HomeSection/HomeSection";
 import KnownTechSection from "./sections/KnownTechSection/KnownTechSection";
@@ -14,6 +15,7 @@ function App() {
       <SkillsSection title="skills" />
       <ExperienceSection title="experience" />
       <KnownTechSection title="technologies" />
+      <ContactSection title="contact" />
     </>
   );
 }
