@@ -75,7 +75,7 @@ const experiences = [
     company: "Bhaviaans Technologies pvt.ltd",
     duration: "Feb 2025 – Present",
     description:
-      "Gained hands-on experience in building a full-stack doctor-patient management system, focusing on appointment booking, patient record handling, and user role management.",
+      "A sister concern of Infenox Technologies, where I gained hands-on experience in building a full-stack doctor-patient management system, focusing on appointment booking, patient record handling, and user role management.",
     companyLogo: "https://bhaviaans.com/wp-content/uploads/2024/06/logo.png",
   },
   {

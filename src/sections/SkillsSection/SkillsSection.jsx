@@ -19,10 +19,10 @@ const StyledSkillsWrapper = styled(Box)`
 
 const skills = [
   { skill: "React.js", value: 90 },
-  { skill: "Node.js", value: 80 },
-  { skill: "MongoDB", value: 75 },
   { skill: "JavaScript", value: 85 },
   { skill: "HTML/CSS", value: 95 },
+  { skill: "Node.js", value: 75 },
+  { skill: "MongoDB", value: 70 },
 ];
 
 const SkillsSection = () => {
