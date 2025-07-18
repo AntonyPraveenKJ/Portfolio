@@ -59,8 +59,8 @@ const KnownTechSection = () => {
     <KnownTechSectionWrapper id="technologies">
       <GradientText
         textAlign="center"
-        variant="h2"
-        fontFamily="Dancing Script, cursive"
+        variant="h3"
+        fontFamily="Nunito"
         fontWeight="bold"
         paddingBottom="20px"
       >

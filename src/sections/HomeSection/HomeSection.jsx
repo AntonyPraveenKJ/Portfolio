@@ -44,14 +44,14 @@ const TypingText = styled.h3`
   background-color: red;
   display: inline-block;
   white-space: pre;
-  border-right: 2px solid rgba(30, 255, 0, 1);
+  border-right: 2px solid rgba(0, 0, 0, 1);
   padding-right: 4px;
   margin: 0;
   animation: ${blink} 1s step-end infinite;
   background: linear-gradient(
     45deg,
-    rgba(0, 89, 253, 0.84),
-    rgba(30, 255, 0, 1)
+    rgba(0, 0, 0, 0.84),
+    rgba(5, 5, 5, 1)
   );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -143,16 +143,6 @@ export const iconsData = [
     icon: <GitHubIcon fontSize="small" />,
     link: import.meta.env.VITE_GIT_ID,
     color: "#333",
-  },
-  {
-    icon: <FacebookIcon fontSize="small" />,
-    link: import.meta.env.VITE_FACEBOOK_ID,
-    color: "#1877F2",
-  },
-  {
-    icon: <InstagramIcon fontSize="small" />,
-    link: import.meta.env.VITE_INSTAGRAM_ID,
-    color: "#E1306C",
   },
 ];
 

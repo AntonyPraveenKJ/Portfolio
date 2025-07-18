@@ -27,12 +27,8 @@ const navItems = [
 ];
 
 const NavButton = styled(Button)`
-  background-image: linear-gradient(45deg, #0059fd, #37ff1d);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  color: transparent !important;
-  font-family: "Dancing Script", cursive !important;
+  color: #0A66C2 !important;
+  font-family: "Nunito", sans-serif !important;
   font-weight: bold !important;
   font-size: 20px !important;
   text-transform: none !important;
@@ -150,7 +146,7 @@ const Navbar = () => {
               fontWeight: "bold",
               fontSize: "1.5rem",
               fontFamily: "Roboto Mono",
-              backgroundImage: "linear-gradient(45deg, #0059fd, #37ff1d)",
+              backgroundImage: "linear-gradient(45deg, #0A66C2, #0A66C2)",
               WebkitBackgroundClip: "text",
               WebkitTextFillColor: "transparent",
               backgroundClip: "text",

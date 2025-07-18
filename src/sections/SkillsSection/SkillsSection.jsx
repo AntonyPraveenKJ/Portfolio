@@ -37,8 +37,8 @@ const SkillsSection = () => {
   return (
     <StyledSkillsWrapper id="skills" ref={ref}>
       <GradientText
-        variant="h2"
-        fontFamily="Dancing Script, cursive"
+        variant="h3"
+        fontFamily="Nunito, sans-serif"
         fontWeight="bold"
       >
         Skills

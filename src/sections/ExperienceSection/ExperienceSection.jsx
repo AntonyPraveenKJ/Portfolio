@@ -119,8 +119,8 @@ const ExperienceSection = () => {
   return (
     <ExperienceSectionWrapper id="experience">
       <GradientText
-        variant="h2"
-        fontFamily="Dancing Script, cursive"
+        variant="h3"
+        fontFamily="Nunito"
         fontWeight="bold"
       >
         Experience

@@ -74,8 +74,8 @@ const ContactSection = () => {
     <>
       <StyledContactSectionWrapper id="contact">
         <GradientText
-          variant="h2"
-          fontFamily="Dancing Script, cursive"
+          variant="h3"
+          fontFamily="Nunito"
           fontWeight="bold"
         >
           Contact Me
